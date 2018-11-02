@@ -9,6 +9,7 @@ void menu() {
     Dictionary d{};
     d.read_file();
 
+    //Will run until exit is triggered
     while(run) {
         cout << "Choose an option." << endl;
         cout << "1 - Print dictionary" << endl;
@@ -18,7 +19,6 @@ void menu() {
 
         int choice;
         cin >> choice;
-        string temp_word;
 
         switch (choice) {
             case 1:
@@ -47,6 +47,6 @@ void menu() {
 int main() {
     menu();
 
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Thanks for playing!" << std::endl;
     return 0;
 }
