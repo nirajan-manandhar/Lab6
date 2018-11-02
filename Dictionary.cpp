@@ -19,7 +19,6 @@ void Dictionary::read_file() {
     string delimiter = "-";
     ifstream fin;
     fin.open("../dictionary.txt");
-
     while (getline(fin, line)) {
         string key = line.substr(0, line.find(delimiter) - 1);
         string def = line.substr(line.find(delimiter) + 2);
@@ -51,6 +50,9 @@ void Dictionary::new_word() {
         string temp_def;
         getline(cin >> ws, temp_def);
         dict.insert(make_pair(temp_word, temp_def));
+        ofstream out;
+        out.open("../dictionary.txt", ios::app);
+        out << temp_word << " - " << temp_def << endl;
     }
 
 
