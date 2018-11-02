@@ -21,9 +21,9 @@ private:
 public:
     Dictionary() = default;
     void print();
-    string find_word(string);
+    string find_word();
     void read_file();
-    void new_word(string, string);
+    void new_word();
 };
 
 
